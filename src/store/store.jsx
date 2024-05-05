@@ -1,5 +1,12 @@
-import { legacy_createStore as createStore } from "redux";
+import { legacy_createStore as createStore, combineReducers } from "redux";
 import { reducerCounter } from "./reducerCounter";
+import { reducerToDo } from "./reducerToDo";
+import { composeWithDevTools } from "@redux-devtools/extension";
 
 
-export const store = createStore(reducerCounter)
+const rootReducer = combineReducers({
+    reducerCounter,
+    reducerToDo,
+})
+
+export const store = createStore(rootReducer, composeWithDevTools())

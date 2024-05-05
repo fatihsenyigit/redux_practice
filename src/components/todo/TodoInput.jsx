@@ -1,10 +1,13 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 
 const TodoInput = () => {
   const [text, setText] = useState("")
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    dispatch({type:'ADD', payload:text})
     setText("")
   }
 

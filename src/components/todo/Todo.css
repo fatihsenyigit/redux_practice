@@ -11,7 +11,7 @@
 }
 
 .ok-logo {
-  width: 40px;
+  width: 30px;
   margin: 10px;
   cursor: pointer;
 }
@@ -27,7 +27,7 @@
   min-width: 400px;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .delete-logo {
-  width: 40px;
+  width: 30px;
   margin: 10px;
   cursor: pointer;
 }

@@ -10,9 +10,8 @@ function App() {
     <div className="app">
       <Provider store={store}>
         <Counter />
+        <Todo />
       </Provider>
-
-      {/* <Todo /> */}
     </div>
   );
 }

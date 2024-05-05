@@ -1,12 +1,14 @@
+import { useSelector } from "react-redux"
 import TodoItem from "./TodoItem"
 
 const TodoList = () => {
   const handleClearList = () => {}
+  const todoListUI = useSelector((state) => state.reducerToDo.todoList);
 
   return (
     <div>
       <div>
-        {[1, 2]?.map((todo) => (
+        {todoListUI?.map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </div>
