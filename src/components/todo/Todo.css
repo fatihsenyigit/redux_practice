@@ -14,6 +14,11 @@
   width: 30px;
   margin: 10px;
   cursor: pointer;
+  transition: all .6s;
+}
+
+.ok-logo:hover {
+  scale: 1.3;
 }
 
 .todoText {
@@ -49,4 +54,9 @@
   width: 30px;
   margin: 10px;
   cursor: pointer;
+  transition: all .6s;
+}
+
+.delete-logo:hover {
+  scale: 1.2;
 }

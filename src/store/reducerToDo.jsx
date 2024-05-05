@@ -1,6 +1,6 @@
 const initialState = {
   todoList: [
-    { id: new Date().getTime(), text: "homework", isCompleted: false },
+    { id: new Date().getTime(), text: "homework", completed: false },
   ],
 };
 
@@ -15,11 +15,19 @@ export const reducerToDo = (state = initialState, { type, payload }) => {
       return {
         todoList: [
           ...state.todoList,
-          { id: new Date().getTime(), text: payload, isCompleted: true },
+          { id: new Date().getTime(), text: payload, completed: false },
         ],
       };
     case clr:
       return initialState;
+    case del:
+      return {
+        todoList: state.todoList.filter((item) => item.id !== payload),
+      };
+    case cmp:
+      return {
+        todoList: state.todoList.map((item) => item.id === payload?{...item, completed:!item.completed}:item),
+      };
     default:
       return initialState;
   }
